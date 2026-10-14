@@ -1,6 +1,7 @@
 package io.github.rafaeljc.designpatterns.notification.model;
 
 import io.github.rafaeljc.designpatterns.notification.exception.InvalidNotificationException;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -21,6 +22,8 @@ public class Notification {
 
 	private String recipient;
 	private String subject;
+
+	@Column(length = 1000)
 	private String message;
 
 	@Enumerated(EnumType.STRING)
