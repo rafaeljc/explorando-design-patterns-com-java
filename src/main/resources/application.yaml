@@ -1,3 +1,14 @@
 spring:
   application:
     name: designpatterns
+  datasource:
+    url: jdbc:h2:mem:notifications
+  h2:
+    console:
+      enabled: true
+  jpa:
+    open-in-view: false
+
+logging:
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %-5level %logger{0} - %msg%n"
